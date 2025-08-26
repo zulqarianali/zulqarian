@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zulqarnain Ali - Graphic Designer & Video Editor</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Base styles */
+        :root {
+            --primary-color: #212529;
+            --secondary-color: #f8f9fa;
+            --accent-color: #6c757d;
+            --highlight-color: #0d6efd;
+            --text-light: #e9ecef;
+            --text-dark: #343a40;
+            --font-english: 'Poppins', sans-serif;
+            --font-urdu: 'Noto Nastaliq Urdu', serif;
+        }
+
+        body {
+            font-family: var(--font-english);
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* General layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--highlight-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Buttons and links */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight-color);
+            color: var(--text-light);
+            border: 2px solid var(--highlight-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--highlight-color);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Header & Navigation */
+        .top-banner {
+            background-color: var(--highlight-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 0.75rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .header-sticky {
+            background-color: rgba(33, 37, 41, 0.95);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: var(--font-english);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* Hero Section (Updated) */
+        #home {
+            min-height: calc(100vh - 8rem); /* Adjust based on header/banner height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--primary-color);
+            padding: 4rem 1rem;
+        }
+
+        #home .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--highlight-color);
+            margin-bottom: 2rem;
+            animation: scaleIn 1s ease-out;
+        }
+        
+        #home .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        #home .hero-text h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin-top: 0;
+            animation: fadeIn 1s ease-out 0.2s; /* Delayed fade in */
+        }
+        
+        #home .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+
+        /* About Me Section */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .about-bio {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            text-align: left;
+        }
+
+        .skill-item p {
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            background-color: var(--text-light);
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: var(--highlight-color);
+            border-radius: 4px;
+            width: 0;
+            animation: fillBar 1.5s ease-out forwards;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: #2b3035;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            color: var(--highlight-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--highlight-color);
+            border-color: var(--highlight-color);
+        }
+
+        .portfolio-content {
+            display: none;
+        }
+
+        .portfolio-content.active {
+            display: block;
+        }
+
+        .video-portfolio-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .video-portfolio-grid iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .graphic-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .graphic-card {
+            background-color: #2b3035;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .graphic-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .graphic-card-details {
+            padding: 1rem;
+        }
+
+        /* Pricing Section */
+        .pricing-table {
+            background-color: #2b3035;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1.25rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #495057;
+        }
+
+        th {
+            background-color: #343a40;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .urdu-text {
+            font-family: var(--font-urdu);
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+            background-color: #2b3035;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #495057;
+            background-color: #343a40;
+            color: var(--text-light);
+            box-sizing: border-box;
+            font-family: var(--font-english);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            background-color: #2b3035;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1d20;
+            color: var(--text-light);
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+        
+        .warning-bar {
+            background-color: #dc3545;
+            padding: 0.5rem 0;
+            font-weight: 600;
+        }
+
+        /* WhatsApp Button */
+        #whatsapp-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        
+        .whatsapp-link {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp-link:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: var(--skill-percent); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <div id="whatsapp-button">
+        <a href="https://wa.me/923247107543" target="_blank" class="whatsapp-link" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        50% Discount Offer! | Get High-Quality Graphic & Video Services.
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header-sticky">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">Zulqarnain Ali</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container hero-content">
+                <img src="https://placehold.co/300x300/6c757d/e9ecef?text=Zulqarnain" alt="Professional image of Zulqarnain Ali" class="hero-image">
+                <div class="hero-text">
+                    <h1>Hi, I'm Zulqarnain Ali</h1>
+                    <h3>A passionate Graphic Designer & Video Editor</h3>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p class="about-bio">
+                        With over 5 years of experience, I specialize in creating visually stunning graphic designs and compelling video content. My expertise lies in transforming ideas into engaging visuals that capture attention and deliver a clear message. I am a versatile professional with a strong command of industry-standard software and a keen eye for detail.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <p>Photoshop</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 95%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Premiere Pro</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>After Effects</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Filmora</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>EDIUS</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Illustrator</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 75%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Canva</p>
+                            <div class="skill-bar"><div class="skill-level" style="--skill-percent: 99%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-video icon"></i>
+                        <h3>Video Editing</h3>
+                        <p>Professional video editing for YouTube, social media, and corporate use. We craft engaging stories from raw footage.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-paint-brush icon"></i>
+                        <h3>Graphic Design</h3>
+                        <p>From logos to brand identity, I create powerful and memorable graphics that represent your brand effectively.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-magic icon"></i>
+                        <h3>Motion Graphics</h3>
+                        <p>Dynamic motion graphics and animations to bring your concepts to life and add a professional touch to your videos.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-image icon"></i>
+                        <h3>Thumbnail Designing</h3>
+                        <p>Eye-catching and click-worthy YouTube thumbnail designs that boost your video's visibility and engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <h2>My Portfolio</h2>
+                <div class="portfolio-tabs">
+                    <button class="tab-btn active" data-tab="video-portfolio">Video Portfolio</button>
+                    <button class="tab-btn" data-tab="graphic-portfolio">Graphic Design Portfolio</button>
+                </div>
+                
+                <div id="video-portfolio" class="portfolio-content active">
+                    <div class="video-portfolio-grid">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/3c_eE5T7z7I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/2-J5f564t2w" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div id="graphic-portfolio" class="portfolio-content">
+                    <div class="graphic-portfolio-grid">
+                        <div class="graphic-card">
+                            <img src="https://placehold.co/400x300/6c757d/e9ecef?text=Thumbnail+Design" alt="Thumbnail Design">
+                            <div class="graphic-card-details">
+                                <h3>Client: Tech Reviews</h3>
+                                <p><strong>Software:</strong> Photoshop, Illustrator</p>
+                                <p>Engaging thumbnail design to increase click-through rates.</p>
+                            </div>
+                        </div>
+                        <div class="graphic-card">
+                            <img src="https://placehold.co/400x300/495057/e9ecef?text=Logo+Design" alt="Logo Design">
+                            <div class="graphic-card-details">
+                                <h3>Client: Local Cafe</h3>
+                                <p><strong>Software:</strong> Illustrator</p>
+                                <p>Modern logo design capturing the brand's unique essence.</p>
+                            </div>
+                        </div>
+                        <div class="graphic-card">
+                            <img src="https://placehold.co/400x300/6c757d/e9ecef?text=Poster+Design" alt="Poster Design">
+                            <div class="graphic-card-details">
+                                <h3>Client: Event Company</h3>
+                                <p><strong>Software:</strong> Photoshop</p>
+                                <p>Promotional poster for a music festival, highlighting key details.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <div class="container">
+                <h2>Pricing</h2>
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                                <th>Package Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>30–35 sec video</td>
+                                <td>PKR 1500</td>
+                                <td class="urdu-text">
+                                    اسکریپٹ، وائس اوور، پروفیشنل ایڈیٹنگ، بیک گراؤنڈ میوزک
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Up to 1 min video</td>
+                                <td>PKR 1800</td>
+                                <td class="urdu-text">
+                                    اسکریپٹ، وائس اوور، پروفیشنل ایڈیٹنگ، بیک گراؤنڈ میوزک
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3 video bundle</td>
+                                <td>PKR 4500–5400</td>
+                                <td class="urdu-text">
+                                    اسکریپٹ، وائس اوور، پروفیشنل ایڈیٹنگ، بیک گراؤنڈ میوزک
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5 video bundle</td>
+                                <td>PKR 6000–9000</td>
+                                <td class="urdu-text">
+                                    اسکریپٹ، وائس اوور، پروفیشنل ایڈیٹنگ، بیک گراؤنڈ میوزک
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card service-card">
+                        <p>"Zulqarnain's work is exceptional! He transformed our raw footage into a masterpiece."</p>
+                        <p><strong>- Client A</strong></p>
+                    </div>
+                    <div class="testimonial-card service-card">
+                        <p>"The thumbnail designs were top-notch and our click-through rate skyrocketed. Highly recommended!"</p>
+                        <p><strong>- Client B</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-phone-alt"></i> Phone: +92 324 7107543</p>
+                        <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp: +92 324 7107543</p>
+                        <div style="margin-top: 1.5rem; height: 250px; background-color: #343a40;">
+                            <!-- Google Maps Placeholder -->
+                            <p style="text-align: center; padding-top: 100px;">Google Map Location Embed Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog/Tips & FAQ Sections (optional placeholders) -->
+        <section id="blog" style="display:none;">
+            <!-- Placeholder for Blog/Tips -->
+        </section>
+
+        <section id="faq" style="display:none;">
+            <!-- Placeholder for FAQ -->
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="warning-bar">
+            Warning: Downloading and reusing videos is a legal offense.
+        </div>
+        <div class="container">
+            <p>&copy; 2024 Zulqarnain Ali. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Portfolio tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.portfolio-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const tabId = button.dataset.tab;
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Basic form submission (prevents default behavior and shows a message)
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                console.log('Thank you for your message! I will get back to you shortly.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
